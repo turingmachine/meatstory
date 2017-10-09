@@ -1,0 +1,195 @@
+.content {
+  margin-top: 60px;
+}
+
+.logo {
+  display: block;
+  width: 302px;
+}
+
+.paragraph {
+  margin-bottom: 1em;
+  font-family: '2adaa3 3 0', sans-serif;
+  color: #000;
+  font-size: 24px;
+  line-height: 145%;
+}
+
+.paragraph.white {
+  margin-bottom: 0em;
+  color: #fff;
+}
+
+.button {
+  display: block;
+  margin-bottom: 90px;
+  padding-top: 15px;
+  padding-bottom: 9px;
+  border: 3px solid #00cb23;
+  font-family: '2adaa3 3 0', sans-serif;
+  color: #000;
+  font-size: 28px;
+  line-height: 100%;
+  text-align: center;
+  letter-spacing: 4px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.inline-link {
+  display: inline-block;
+  border-bottom: 3px solid #000;
+  font-family: '2adaa3 3 0', sans-serif;
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.inline-link.white {
+  border-bottom-style: none;
+  border-bottom-width: 0px;
+  color: #fff;
+  font-size: 28px;
+  line-height: 145%;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.container {
+  margin-top: 60px;
+  padding-right: 90px;
+  padding-left: 90px;
+}
+
+.info {
+  display: block;
+  margin-bottom: 60px;
+  padding-left: 114px;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  background-image: url('../images/cow.svg');
+  background-position: 0px 0px;
+  background-size: 86px;
+  background-repeat: no-repeat;
+}
+
+.info.farmer {
+  background-image: url('../images/tractor.svg');
+  background-size: 86px;
+}
+
+.overlay {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  display: none;
+  background-image: -webkit-linear-gradient(270deg, rgba(0, 0, 0, .72), rgba(0, 0, 0, .72));
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, .72), rgba(0, 0, 0, .72));
+  opacity: 0;
+}
+
+.text-field {
+  display: inline-block;
+  width: 280px;
+  height: 52px;
+  margin-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  box-shadow: 0 3px 12px 0 rgba(0, 0, 0, .63);
+  font-family: '2adaa3 3 0', sans-serif;
+  color: #000;
+  font-size: 28px;
+  line-height: 100%;
+}
+
+.close-button {
+  position: relative;
+  left: 0px;
+  top: 0px;
+  display: inline-block;
+  padding: 18px;
+  float: right;
+}
+
+.form-block {
+  margin-top: 310px;
+}
+
+@media (max-width: 767px) {
+  .content {
+    margin-top: 45px;
+  }
+  .logo {
+    width: 226px;
+  }
+  .paragraph {
+    font-size: 18px;
+  }
+  .button {
+    margin-bottom: 60px;
+    padding-top: 15px;
+    padding-bottom: 9px;
+    border-width: 3px;
+    font-size: 22px;
+  }
+  .inline-link.white {
+    font-size: 22px;
+  }
+  .container {
+    margin-top: 27px;
+    padding-right: 36px;
+    padding-left: 36px;
+  }
+  .info {
+    margin-bottom: 45px;
+    padding-left: 61px;
+    background-size: 43px;
+  }
+  .info.farmer {
+    background-size: 43px;
+  }
+  .text-field {
+    display: block;
+    width: 100%;
+    height: 44px;
+    margin-bottom: 18px;
+  }
+  .close-button {
+    margin-top: 160px;
+  }
+  .form-block {
+    margin-top: 235px;
+  }
+}
+
+@media (max-width: 479px) {
+  .inline-link.white {
+    display: inline-block;
+  }
+  .container {
+    padding-right: 18px;
+    padding-left: 18px;
+  }
+  .info {
+    padding-left: 54px;
+  }
+  .text-field {
+    display: block;
+    width: 100%;
+    height: 44px;
+  }
+  .form {
+    margin-top: 235px;
+  }
+}
+
+@font-face {
+  font-family: '2adaa3 3 0';
+  src: url('../fonts/2ADAA3_3_0.eot') format('embedded-opentype'), url('../fonts/2ADAA3_3_0.woff') format('woff'), url('../fonts/2ADAA3_3_0.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}

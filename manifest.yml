@@ -1,0 +1,11 @@
+---
+applications:
+- name: meatstory
+  buildpack: https://github.com/cloudfoundry/buildpack-nodejs.git
+  command: node index.js
+  memory: 64MB
+  routes:
+  - route: www.meatstory.ch
+  - route: meatstory.scapp.io
+  env:
+    ROOT_URL: "https://www.meatstory.ch"
