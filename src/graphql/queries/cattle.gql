@@ -1,0 +1,16 @@
+query Cattle($id: String!) {
+  cattle(id:$id) {
+    NameFather
+    NameMother
+    DeathDate
+    Gender
+    BirthDate
+    Race
+    Name
+    BirthWeight
+    History {
+      StayFamily
+      StayLocation
+    }
+  }
+}

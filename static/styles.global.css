@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+@media only screen and (max-width: 767px) {
+  .ui.container {
+    margin: 0 !important;
+  }
+}
+.inverted {
+  a {
+    color: #fff !important;
+  }
+}
+.fair {
+  background-color: #bcee68;
+}
+.dark {
+  background-color: #a2cd5a;
+}
+.dark h2 {
+  color: #fff !important;
+}
+.is-flex {
+  display: flex;
+}
+.icons {
+   border-radius: 0px !important;
+}
+.segment {
+   padding: 1.5em !important;
+   margin: 0px !important;
+}
+.content {
+  margin-top: 0px !important;
+  margin-bottom: 10px !important;
+}
+.partner {
+  padding-right: 0 !important;
+  padding-bottom: 0 !important;
+}
+.partner div {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+.partner div img {
+  margin-right: 2em;
+  margin-bottom: 2em;
+  max-width: 100%;
+  max-height: 4em;
+}
+.about img {
+  margin-right: 1em;
+}
