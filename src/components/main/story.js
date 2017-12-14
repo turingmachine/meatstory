@@ -85,8 +85,6 @@ export default class Story extends React.Component {
                   Nach der Geburt bei der Familie {cattle.History[0].StayFamily}
                   {' '}in {cattle.History[0].StayLocation}
                   {' '}ging die Reise nach {_.join(stays, '')}.
-                  {' '}Dort überall verbrachte Sie viel Zeit mit ihren FreundInnen
-                  {' '}wiederkäuend auf den Weiden
                 </Feed.Content>
               </Feed.Event>
             </Feed>
