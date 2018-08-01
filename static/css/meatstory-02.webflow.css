@@ -1,0 +1,305 @@
+body {
+  font-family: Hknova, sans-serif;
+  color: #232323;
+  font-size: 18px;
+  line-height: 160%;
+}
+
+.header-section {
+  padding-top: 45px;
+  padding-bottom: 72px;
+}
+
+.hero-section {
+  padding-bottom: 99px;
+}
+
+.featuring-section {
+  padding-top: 54px;
+  padding-bottom: 54px;
+  background-color: #f2f2f2;
+}
+
+.footer-section {
+  padding-top: 72px;
+  padding-bottom: 99px;
+  background-color: #464646;
+}
+
+.logo {
+  display: block;
+}
+
+.hero-title {
+  margin-bottom: 72px;
+  font-size: 74px;
+  line-height: 120%;
+  font-weight: 700;
+}
+
+.hero-image {
+  display: block;
+}
+
+.hero-instructions {
+  margin-top: 18px;
+  margin-bottom: 18px;
+  font-size: 21px;
+  line-height: 160%;
+}
+
+.title-2 {
+  margin-top: 27px;
+  margin-bottom: 18px;
+  font-size: 40px;
+  line-height: 150%;
+}
+
+.title-2.white {
+  color: #fff;
+}
+
+.logo-block {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 72px;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.feature-logo {
+  margin-right: 27px;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 auto;
+  -ms-flex: 0 auto;
+  flex: 0 auto;
+}
+
+.footer-text {
+  margin-bottom: 18px;
+  padding-right: 36px;
+  color: #fff;
+}
+
+.link {
+  color: #fff;
+}
+
+.title-1 {
+  margin-bottom: 72px;
+  font-size: 58px;
+  line-height: 120%;
+}
+
+.story-section {
+  padding-bottom: 99px;
+}
+
+.story-block {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.title-3 {
+  margin-top: 36px;
+  margin-bottom: 18px;
+  padding-top: 118px;
+  background-image: url('../images/Cow.svg');
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  font-size: 21px;
+  line-height: 120%;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.title-3.tractor {
+  background-image: url('../images/Tractor.svg');
+}
+
+.title-3.steak {
+  background-image: url('../images/Steak.svg');
+}
+
+.textfield {
+  height: 52px;
+  margin-right: 9px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  border: 1.5px solid #bbb;
+  border-radius: 4px;
+  font-size: 20px;
+  line-height: 120%;
+}
+
+.form {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.button {
+  height: 52px;
+  padding-right: 27px;
+  padding-left: 27px;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 auto;
+  -ms-flex: 0 auto;
+  flex: 0 auto;
+  border-radius: 4px;
+  background-color: #468a11;
+  font-size: 18px;
+  line-height: 120%;
+}
+
+@media (max-width: 991px) {
+  .hero-title {
+    font-size: 60px;
+  }
+  .hero-instructions {
+    font-size: 20px;
+  }
+  .title-2 {
+    margin-bottom: 12px;
+    font-size: 36px;
+  }
+  .logo-block {
+    margin-bottom: 54px;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .feature-logo {
+    margin-bottom: 18px;
+  }
+  .title-1 {
+    font-size: 44px;
+  }
+  .textfield {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 767px) {
+  .header-section {
+    padding-top: 27px;
+    padding-bottom: 45px;
+  }
+  .hero-section {
+    padding-bottom: 72px;
+  }
+  .featuring-section {
+    padding-top: 36px;
+    padding-bottom: 18px;
+  }
+  .hero-title {
+    margin-bottom: 54px;
+    font-size: 54px;
+  }
+  .title-2 {
+    font-size: 32px;
+  }
+  .footer-text {
+    font-size: 16px;
+  }
+  .container {
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+  .column-2 {
+    margin-top: 36px;
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  .column-1 {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  .title-1 {
+    margin-bottom: 47px;
+    font-size: 42px;
+  }
+  .story-section {
+    padding-bottom: 45px;
+  }
+  .title-3 {
+    margin-top: 18px;
+    margin-bottom: 12px;
+    padding-top: 36px;
+    padding-left: 72px;
+    background-position: 0px 100%;
+    background-size: 60px;
+    font-size: 19px;
+  }
+  .story-text {
+    font-size: 16px;
+  }
+  .story-column {
+    margin-bottom: 54px;
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  .form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 479px) {
+  .hero-title {
+    margin-bottom: 36px;
+    font-size: 37px;
+    line-height: 125%;
+  }
+  .hero-instructions {
+    font-size: 16px;
+  }
+  .title-2 {
+    margin-bottom: 18px;
+    font-size: 25px;
+    line-height: 120%;
+  }
+  .container {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+  .title-1 {
+    font-size: 36px;
+  }
+  .title-3 {
+    padding-top: 30px;
+    padding-left: 63px;
+    background-size: 54px;
+  }
+  .story-column {
+    margin-bottom: 27px;
+  }
+}
+
+@font-face {
+  font-family: 'Hknova';
+  src: url('../fonts/HKNova-Regular.eot') format('embedded-opentype'), url('../fonts/HKNova-Regular.woff') format('woff'), url('../fonts/HKNova-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Hknova';
+  src: url('../fonts/HKNova-Bold.eot') format('embedded-opentype'), url('../fonts/HKNova-Bold.woff') format('woff'), url('../fonts/HKNova-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}

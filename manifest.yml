@@ -1,0 +1,9 @@
+---
+applications:
+- name: meatstory
+  buildpack: https://github.com/cloudfoundry/buildpack-nodejs.git
+  command: npm install && npm run build && npm run start
+  memory: 1024MB
+  routes:
+  - route: meatstory.scapp.io
+  - route: www.meatstory.ch
