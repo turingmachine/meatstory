@@ -7,7 +7,7 @@ import pageview from '../analytics'
 
 class Story extends React.Component {
   static async getInitialProps({ req, query }) {
-    const id = query.id.replace(/\s*/g, '')
+    const id = query.id.replace(/\s*/g, '').replace(/CH/g,'')
     const protocol = process.env.NODE_ENV === 'production' ? 'https' : 'http'
     const host = req ? `${protocol}://${req.headers.host}` : window.location.origin
     const url = `${host}/api/story/${_.startsWith(id, '120') ? '' : '120'}.${id}`
@@ -16,10 +16,22 @@ class Story extends React.Component {
     return { cattle }
   }
   getHistory = history => {
-    const intermediateStays = _.slice(history, 1, -1)
-    return _.slice(intermediateStays, 0, -1).map(stayItem => {
-      return stayItem.StayLocation
-    }).join(', ') + ` und ${true ? 'zurück nach' : ''} ${_.last(intermediateStays).StayLocation}`
+    const lastStay = _.last(_.slice(history, 0, -1).map(stay => stay.StayLocation))
+    const intermediateStays = _.uniq(_.slice(history, 0, -2).map(stay => stay.StayLocation))
+
+    return (
+      <span>
+        Nach der Geburt bei der
+        {' '} Familie {_.first(history).StayFamily}
+        {' '} in {_.first(history).StayLocation}
+        {' '} ging die Reise nach
+        {' '} {intermediateStays.slice(1).join(', ')}
+        {' '} und
+        {' '} {_.includes(intermediateStays, lastStay) ? 'wieder zurück nach' : ''}
+        {' '} {lastStay}
+        {'.'}
+      </span>
+    )
   }
   componentDidMount () {
     pageview()
@@ -36,8 +48,10 @@ class Story extends React.Component {
               <div className="story-block">
                 <h3 className="title-3">Herkunft</h3>
                 <p className="story-text">
-                  {cattle.Name} war eine schöne {cattle.Race} Kuh und ist am {moment(cattle.BirthDate).format('M. MMMM YYYY')} zur Welt gekommen.
-                  Ihre Eltern waren {cattle.NameMother} und {cattle.NameFather}.
+                  {cattle.Name} war {cattle.Gender === '2' ? 'ein' : 'eine'}
+                  {' '}schöne {cattle.Race} {cattle.Gender === '2' ? 'Ochse' : 'Kuh'}
+                  {' '}und ist am {moment(cattle.BirthDate).format('M. MMMM YYYY')} zur Welt gekommen.
+                  {' '}Ihre Eltern waren {cattle.NameMother} und {cattle.NameFather}.
                 </p>
               </div>
             </div>
@@ -45,12 +59,7 @@ class Story extends React.Component {
               <div className="story-block">
                 <h3 className="title-3 tractor">Auf der Wiese</h3>
                 <p className="story-text">
-                  Nach der Geburt bei der
-                  {' '} Familie {_.first(cattle.CattleHistory).StayFamily}
-                  {' '} in {_.first(cattle.CattleHistory).StayLocation}
-                  {' '} ging die Reise nach
-                  {' '} {history}
-                  {'.'}
+                  {history}
                 </p>
               </div>
             </div>
