@@ -9,7 +9,7 @@ class Story extends React.Component {
   static async getInitialProps({ req, query }) {
     const id = query.id.replace(/\s*/g, '')
     const protocol = process.env.NODE_ENV === 'production' ? 'https' : 'http'
-    const host = req ? `${protocol}://${req.headers.host}` : window.location.origin;
+    const host = req ? `${protocol}://${req.headers.host}` : window.location.origin
     const url = `${host}/api/story/${_.startsWith(id, '120') ? '' : '120'}.${id}`
     const res = await fetch(url)
     const cattle = await res.json()
@@ -43,11 +43,13 @@ class Story extends React.Component {
             </div>
             <div className="story-column w-col w-col-4">
               <div className="story-block">
-                <h3 className="title-3 tractor">Auf der Weise</h3>
+                <h3 className="title-3 tractor">Auf der Wiese</h3>
                 <p className="story-text">
-                  Nach der Geburt bei der Familie {_.first(cattle.CattleHistory).StayFamily}
-                  in {_.first(cattle.CattleHistory).StayLocation} ging die Reise nach
-                  {' '}{history}
+                  Nach der Geburt bei der
+                  {' '} Familie {_.first(cattle.CattleHistory).StayFamily}
+                  {' '} in {_.first(cattle.CattleHistory).StayLocation}
+                  {' '} ging die Reise nach
+                  {' '} {history}
                   {'.'}
                 </p>
               </div>
@@ -56,7 +58,7 @@ class Story extends React.Component {
               <div className="story-block">
                 <h3 className="title-3 steak">Bis zum Teller</h3>
                 <p className="story-text">
-                  Melanzane wurde am {moment(cattle.DeathDate).format('M. MMMM YYYY')}
+                  {cattle.Name} wurde am {moment(cattle.DeathDate).format('M. MMMM YYYY')}
                   {' '}in {_.last(cattle.CattleHistory).StayLocation} geschlachtet.
                 </p>
               </div>
